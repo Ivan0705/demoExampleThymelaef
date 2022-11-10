@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+</head>
+<body>
+<div class="container-fluid d-flex h-100 justify-content-center align-items-center p-0">
+    <div class="col rounded p-4">
+        <h1 class="position-absolute top-0 start-50 translate-middle-x">Вы успешно зарегистрировались!</h1>
+        <table class="table caption-top">
+            <caption>Данные пользователя</caption>
+            <thead>
+            <tr>
+                <th scope="col">Имя</th>
+                <th scope="col">Email</th>
+                <th scope="col">Пароль</th>
+                <th scope="col">Дата рождения</th>
+                <th scope="col">Профессия</th>
+                <th scope="col">Пол</th>
+                <th scope="col">Семейное положение</th>
+                <th scope="col">Комментарий</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.email}"></td>
+                <td th:text="${user.password}"></td>
+                <td th:text="${user.birthday}"></td>
+                <td th:text="${user.profession}"></td>
+                <td th:text="${user.gender}"></td>
+                <td th:text="${user.married}"></td>
+                <td th:text="${user.note}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
